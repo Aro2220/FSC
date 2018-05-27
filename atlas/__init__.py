@@ -27,3 +27,6 @@ class Atlas:
 
     def goto(self, identifier):
         pass
+
+    def build_index(self):
+        pass
