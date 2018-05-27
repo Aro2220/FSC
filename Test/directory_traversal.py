@@ -1,5 +1,5 @@
 # Import the os module, for the os.walk function
-import os
+from os import walk
 
 # SHA1 Hashing
 from hashlib import sha1
@@ -24,7 +24,7 @@ def sha1_hash(file, directory=''):
 rootDir = '.'
 # rootDir = os.path.abspath(os.sep)
 
-for dirName, subdirList, fileList in os.walk(rootDir):
+for dirName, subdirList, fileList in walk(rootDir):
     print('Found directory: %s' % dirName)
     for fname in fileList:
         print('\t%s' % fname)
