@@ -4,7 +4,8 @@ import os
 
 class Utilities:
     """"Miscellaneous utilities"""
-    def hash_file(self, path,  file):
+    @staticmethod
+    def hash_file(path,  file):
         hasher = hashing()
         with open(os.path.join(path, file), 'rb') as file:
             buf = file.read(64)
