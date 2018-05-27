@@ -2,10 +2,10 @@
 import os
 
 # SHA1 Hashing
-import hashlib
+from hashlib import sha1
 
-BLOCKSIZE = 65536
-hasher = hashlib.sha1()
+blocksize = 65536
+hasher = sha1()
 
 
 def sha1_hash(file, directory=''):
@@ -13,10 +13,10 @@ def sha1_hash(file, directory=''):
     print("directory name is " + directory)
 
     with open(directory+'\\'+file, 'rb') as afile:
-        buf = afile.read(BLOCKSIZE)
+        buf = afile.read(blocksize)
         while len(buf) > 0:
             hasher.update(buf)
-            buf = afile.read(BLOCKSIZE)
+            buf = afile.read(blocksize)
     print(hasher.hexdigest())
 
 
