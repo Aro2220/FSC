@@ -17,7 +17,7 @@ def sha1_hash(file, directory=''):
         while len(buf) > 0:
             hasher.update(buf)
             buf = afile.read(blocksize)
-    print(hasher.hexdigest())
+    return hasher.hexdigest()
 
 
 # Set the directory you want to start from
@@ -29,4 +29,7 @@ for dirName, subdirList, fileList in walk(rootDir):
     for fname in fileList:
         print('\t%s' % fname)
 
-        sha1_hash(fname, dirName)
+        print(sha1_hash(fname, dirName))
+
+        # atlas(fname, dirName, sha1_hash)
+
