@@ -3,7 +3,7 @@ from hashlib import sha1 as hashing
 import os
 
 class HashUtils:
-    """"Miscellaneous utilities"""
+    """SHA1 hashing utilities"""
     @staticmethod
     def hash_file(path,  file):
         hasher = hashing()
@@ -12,4 +12,4 @@ class HashUtils:
             while len(buf) > 0:
                 hasher.update(buf)
                 buf = file.read(64)
-        return hasher.hexdigest()
+        return hasher.digest()
