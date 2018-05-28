@@ -9,4 +9,5 @@ def hash_file(file, directory=''):
         while len(buf) > 0:
             hasher.update(buf)
             buf = afile.read(64)
-    return hasher.digest()
+    # return hasher.digest()
+    return hasher.hexdigest()
