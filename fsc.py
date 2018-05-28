@@ -13,6 +13,5 @@ def main():
     test.directory_traversal(root_dir)
 
 
-
 if __name__ == '__main__':
     main()
