@@ -4,7 +4,8 @@ import utilities
 
 
 def main():
-    pass
+    utilities.Hashing()
+
 
 
 if __name__ == '__main__':
