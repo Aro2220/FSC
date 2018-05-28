@@ -1,5 +1,7 @@
 # Copyright (c) 2018, Matheus Xavier Silva, Aro2220
 
+import msgpack
+
 
 class FSH:
     """fileserializationhelper class to ease serialization"""
@@ -8,7 +10,8 @@ class FSH:
         self.file_name = fname
         self.path = path
         self.hash = fhash
-        self.timestamp
+        self.timestamp = timestamp
 
-
-    def serialize(self):
+    def serialize(self, stream: bytearray):
+        tpl = (self.file_name, self.path, self.hash, self.timestamp)
+        msgpack.dumps(tpl)
