@@ -9,7 +9,7 @@ hasher = sha1()
 
 
 def sha1_hash(file, directory=''):
-    print("file name is " + file)
+    print("file.py name is " + file)
     print("directory name is " + directory)
 
     with open(directory+'\\'+file, 'rb') as afile:
